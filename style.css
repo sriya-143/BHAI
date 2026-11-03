@@ -347,3 +347,11 @@ button:focus-visible, a:focus-visible { outline: 3px solid #54204c; outline-offs
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+/* Mobile background fix */
+@media (max-width: 768px) {
+  .screen {
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+}
