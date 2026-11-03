@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffcfad">
+  <meta name="description" content="A funny, festive and interactive Bhai Dooj surprise for Bhai.">
+  <title>Operation Bhai Dooj 💛</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Fredoka:wght@400;500;600;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient-sparkles" aria-hidden="true">
+    <span>✦</span><span>✿</span><span>♡</span><span>✧</span><span>✦</span>
+  </div>
+
+  <main id="app">
+    <!-- PAGE 1: FESTIVE LOADING -->
+    <section id="loadingScreen" class="screen scene-home is-active" aria-labelledby="loadingTitle">
+      <div class="content-card home-card">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> THE OFFICIAL BHAI DOOJ SURPRISE <span class="eyebrow-dot"></span></div>
+        <div class="mini-rakhi" aria-hidden="true">🪔 ✨ 🪔</div>
+        <h1 id="loadingTitle" class="hero-title">Bhai Dooj<br><span>Loading...</span></h1>
+        <p class="intro-copy">A very important gift is being prepared for one very annoying brother.</p>
+        <div class="loader-wrap" role="status" aria-live="polite">
+          <div class="loader-track"><div id="progressBar" class="loader-fill"></div></div>
+          <div class="loader-meta"><strong id="percentage">0%</strong><span>Gift investigation in progress</span></div>
+        </div>
+        <p id="loadingText" class="loading-message">Loading bhai ka gift...</p>
+        <p id="loadingJoke" class="hand-note">Please do not close this tab. Your sister is watching. 👀</p>
+        <button id="startButton" class="btn btn-primary is-hidden" type="button">FORCE START ANYWAY 😤 <span>→</span></button>
+      </div>
+      <div class="scene-caption caption-left">made with extra pyaar</div>
+      <div class="scene-caption caption-right">and extra complaints ♡</div>
+    </section>
+
+    <!-- PAGE 2: WELCOME -->
+    <section id="welcomeScreen" class="screen scene-home is-hidden" aria-labelledby="welcomeTitle" aria-hidden="true">
+      <div class="content-card welcome-card">
+        <div class="eyebrow">🎀 SPECIAL DELIVERY 🎀</div>
+        <div class="welcome-emoji" aria-hidden="true">🤡💛</div>
+        <p class="tiny-overline">ATTENTION, BHAI!</p>
+        <h1 id="welcomeTitle" class="page-title">Welcome to your<br><span>personal investigation.</span></h1>
+        <p class="body-copy">Congratulations! You have been selected for a very special Bhai Dooj surprise.</p>
+        <div class="warning-note"><span>⚠️</span><p>Your past behaviour will be exposed. There is no escape, only evidence.</p></div>
+        <p class="question-copy">Are you ready to face the consequences?</p>
+        <button class="btn btn-primary" type="button" data-go="taxScreen">I'M READY (I THINK) 😂 <span>→</span></button>
+      </div>
+    </section>
+
+    <!-- PAGE 3: TAX DEPARTMENT -->
+    <section id="taxScreen" class="screen scene-tax is-hidden" aria-labelledby="taxTitle" aria-hidden="true">
+      <div class="content-card tax-card">
+        <div class="section-tag">OFFICIAL SIBLING TAX NOTICE</div>
+        <h1 id="taxTitle" class="page-title compact-title">Your list of <span>crimes</span></h1>
+        <p class="body-copy tax-intro">An official notice for all the crimes committed against your sister.</p>
+        <div class="table-shell">
+          <table class="tax-table">
+            <thead><tr><th scope="col">Duty / Crime</th><th scope="col" class="amount-col">Tax</th></tr></thead>
+            <tbody>
+              <tr><td>Mujhe pareshan kiya 😤</td><td>₹100</td></tr>
+              <tr><td>Mujhe Maggi nahi di 🍜</td><td>₹150</td></tr>
+              <tr><td>Mummy se maar khilaya 😭</td><td>₹100</td></tr>
+              <tr><td>Mujhe ghumane nahi leke gaya 🥲</td><td>₹50</td></tr>
+              <tr><td>Mujhe TV dekhne nahi deta 📺</td><td>₹50</td></tr>
+              <tr><td>Akele akele burger fries khata hai 🍔</td><td>₹50</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="bill-summary">
+          <div class="bill-line"><span>Subtotal</span><strong>₹500</strong></div>
+          <div class="bill-line"><span>GST <small>(Gussa Sab Tolerate)</small></span><strong>₹50</strong></div>
+          <div class="bill-total"><span>TOTAL TAX</span><strong>₹550 <small>+ 1 TREAT</small> 💸</strong></div>
+        </div>
+        <p class="pay-caption">Pay karo aur gift unlock karo 🔓</p>
+        <div class="button-stack">
+          <button class="btn btn-primary" type="button" data-go="reportScreen">PAY KAR DIYA 💰</button>
+          <button class="btn btn-soft" type="button" data-go="discountScreen">Discount milega? 🥺</button>
+        </div>
+        <p class="tiny-footnote">*Payment accepted in hugs, snacks and one treat. No actual money required.</p>
+      </div>
+    </section>
+
+    <!-- OPTIONAL DISCOUNT REJECTION PAGE -->
+    <section id="discountScreen" class="screen scene-tax is-hidden" aria-labelledby="discountTitle" aria-hidden="true">
+      <div class="content-card discount-page-card">
+        <div class="section-tag">DISCOUNT REQUEST REJECTED</div>
+        <div class="discount-emoji" aria-hidden="true">🤡</div>
+        <p class="tiny-overline">NICE TRY, BHAI.</p>
+        <h1 id="discountTitle" class="page-title">Nahi. Bhai ke liye <span>koi discount nahi</span> 😌</h1>
+        <p class="body-copy">Itne saare crimes ke baad bhi discount chahiye? Wah bhai, wah. Tax department is not impressed.</p>
+        <button class="btn btn-primary" type="button" data-go="taxScreen">ACCHA THEEK HAI, WAPAS JAO 😂</button>
+      </div>
+    </section>
+
+    <!-- PAGE 4: REPORT CARD -->
+    <section id="reportScreen" class="screen scene-report is-hidden" aria-labelledby="reportTitle" aria-hidden="true">
+      <div class="content-card report-card">
+        <div class="section-tag">BHAI SCHOOL OF NONSENSE</div>
+        <h1 id="reportTitle" class="page-title compact-title">The verdict is <span>in!</span></h1>
+        <p class="report-session">Academic year: <strong>A lifetime of annoying me</strong></p>
+        <div class="report-list">
+          <div class="report-row"><span>Annoying me 🤡</span><strong>100/100</strong></div>
+          <div class="report-row"><span>Helpfulness 🤝</span><strong>60/100</strong></div>
+          <div class="report-row"><span>Sharing food 🍕</span><strong>20/100</strong></div>
+          <div class="report-row"><span>Being dramatic 🎭</span><strong>99/100</strong></div>
+          <div class="report-row"><span>Being my brother ❤️</span><strong>100/100</strong></div>
+        </div>
+        <div class="remarks-box">
+          <div class="remarks-heading">Teacher's remarks ✍️</div>
+          <p>Bhai nalayak hai, but mera hai. ❤️<br>Needs improvement in sharing food.<br>Extremely talented in irritating his sister.</p>
+          <span class="stamp">PASSED WITH DRAMA 😂</span>
+        </div>
+        <button class="btn btn-primary" type="button" data-go="scratchScreen">UNLOCK YOUR GIFT 🎁 <span>→</span></button>
+      </div>
+    </section>
+
+    <!-- PAGE 5: SCRATCH CARD GAME -->
+    <section id="scratchScreen" class="screen scene-scratch is-hidden" aria-labelledby="scratchTitle" aria-hidden="true">
+      <div class="scratch-content">
+        <div class="scratch-heading-card">
+          <p class="section-tag">THE BIG REVEAL</p>
+          <h1 id="scratchTitle" class="page-title">Choose your <span>luck!</span> 🎁</h1>
+          <p class="body-copy">4 cards hain, lekin gift sirf EK milega. Kisi bhi ek card ko scratch karo!</p>
+          <div class="one-gift-rule">☝️ One scratch = one gift. Baaki gifts sirf dekhne ke liye! 😂</div>
+        </div>
+        <div id="scratchGrid" class="scratch-grid">
+          <article class="scratch-card" data-card="0">
+            <div class="prize-reveal"><span class="prize-emoji">🍕</span><span class="prize-name">One free favourite meal</span><span class="prize-status">YOUR GIFT</span></div>
+            <canvas class="scratch-canvas" aria-label="Scratch gift card one"></canvas>
+          </article>
+          <article class="scratch-card" data-card="1">
+            <div class="prize-reveal"><span class="prize-emoji">🍫</span><span class="prize-name">One chocolate treat</span><span class="prize-status">YOUR GIFT</span></div>
+            <canvas class="scratch-canvas" aria-label="Scratch gift card two"></canvas>
+          </article>
+          <article class="scratch-card" data-card="2">
+            <div class="prize-reveal"><span class="prize-emoji">🕊️</span><span class="prize-name">One day of no fighting</span><span class="prize-status">YOUR GIFT</span></div>
+            <canvas class="scratch-canvas" aria-label="Scratch gift card three"></canvas>
+          </article>
+          <article class="scratch-card" data-card="3">
+            <div class="prize-reveal"><span class="prize-emoji">👑</span><span class="prize-name">VIP treatment for one day</span><span class="prize-status">YOUR GIFT</span></div>
+            <canvas class="scratch-canvas" aria-label="Scratch gift card four"></canvas>
+          </article>
+        </div>
+        <p class="scratch-instruction">👆 Mouse ya finger se kisi ek card ko rub karo.</p>
+        <p id="scratchResult" class="scratch-result" aria-live="polite"></p>
+        <div class="scratch-actions">
+          <button id="lazyRevealButton" class="btn btn-soft" type="button">Too lazy? Reveal a card 😂</button>
+          <button id="finalButton" class="btn btn-primary is-hidden" type="button" data-go="finalScreen">ONE LAST SURPRISE ❤️ <span>→</span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 6: FINAL WISH -->
+    <section id="finalScreen" class="screen scene-home is-hidden" aria-labelledby="finalTitle" aria-hidden="true">
+      <div class="content-card final-card">
+        <div class="eyebrow">💛 A LITTLE LOVE, JUST FOR YOU 💛</div>
+        <div class="tenor-wrap">
+          <iframe src="https://tenor.com/embed/13800653" title="Funny YES GIF" loading="lazy" allowtransparency="true" allowfullscreen></iframe>
+          <a class="gif-fallback" href="https://tenor.com/view/yes-gif-13800653" target="_blank" rel="noopener noreferrer">Open the YES GIF on Tenor ↗</a>
+        </div>
+        <p class="tiny-overline">ME PRETENDING TO HATE YOU...</p>
+        <h1 id="finalTitle" class="page-title final-title">...but secretly<br><span>loving you. 🥹</span></h1>
+        <div class="final-note">
+          <h2>Happy Bhai Dooj, Bhai! ❤️</h2>
+          <p>Happy Bhai Dooj to the only person who can annoy me 24/7 and still get all my love.</p>
+          <p>Thank you for being my built-in bodyguard, permanent headache, occasional helper and forever partner in crime.</p>
+        </div>
+        <p class="love-line">Love you, Bhai! ❤️</p>
+        <p class="hand-note">P.S. Don't forget my gift next year. 😤</p>
+        <button id="loveButton" class="btn btn-primary" type="button">SEND SOME LOVE 💌</button>
+        <p id="celebrationMessage" class="celebration-message" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
