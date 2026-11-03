@@ -66,10 +66,21 @@ button:focus-visible, a:focus-visible { outline: 3px solid #54204c; outline-offs
 .is-hidden { display: none !important; }
 .screen.is-active { animation: screenIn .55s ease both; }
 @keyframes screenIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-.scene-home { background-image: url("images/festival-home-bg.webp"); }
-.scene-tax { background-image: url("images/tax-page-bg.webp"); }
-.scene-report { background-image: url("images/report-card-bg.webp"); }
-.scene-scratch { background-image: url("images/scratch-page-bg.webp"); }
+.scene-home {
+  background-image: url("./festival-home-bg.webp");
+}
+
+.scene-tax {
+  background-image: url("./tax-page-bg.webp");
+}
+
+.scene-report {
+  background-image: url("./report-card-bg.webp");
+}
+
+.scene-scratch {
+  background-image: url("./scratch-page-bg.webp");
+}
 
 .content-card {
   width: min(100%, 570px);
